@@ -1,0 +1,95 @@
+/* Navigation Bar */
+nav {
+  background-color: #4a6837; /* Earthy green */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Global page centering layout */
+.centered-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url('/images/root-texture.jpg'); /* Optional: Add root texture background */
+  background-size: cover;
+  background-position: center;
+  color: #2f3e20; /* Darker green for text */
+  font-family: "Georgia", serif;
+  margin-top: 60px; /* To offset navbar */
+}
+
+/* Product grid */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Product card */
+.product-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #4a6837;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-card h2 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Ensure models fit inside product cards */
+.product-card canvas {
+  width: 100%;
+  height: 200px;
+}
+
+/* Basic page text */
+h1, h2 {
+  font-family: "Georgia", serif;
+  color: #3b5228;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}

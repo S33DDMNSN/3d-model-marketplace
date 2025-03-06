@@ -1,0 +1,30 @@
+/* CategoryPage.css */
+.category-models {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.category-model {
+  width: 320px;
+  height: auto;
+  border: 2px solid #333;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-comment {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}

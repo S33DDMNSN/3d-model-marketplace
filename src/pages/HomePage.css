@@ -1,0 +1,57 @@
+.homepage {
+    padding-top: 80px; /* Push content below navbar */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.homepage-header {
+    margin: 20px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-grid {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Center items in the middle of the page */
+    gap: 20px; /* Spacing between product cards */
+}
+
+.product-card {
+    width: 100%; /* Make product card take full width (optional) */
+    max-width: 600px; /* Limit width so it's not too wide */
+    text-align: center; /* Center text */
+}

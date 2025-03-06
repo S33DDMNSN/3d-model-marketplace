@@ -1,0 +1,82 @@
+/* General Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;  /* Smaller font size */
+    margin: 0 20px;  /* Adjust spacing between links */
+    position: relative;
+  }
+  
+  /* Products Dropdown Container */
+  .navbar .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Button */
+  .navbar .dropdown-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;  /* Smaller font size */
+  }
+  
+  /* Dropdown Content */
+  .navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0; /* Aligns the dropdown directly below */
+    top: 100%; /* Puts it right below the button */
+    min-width: 150px; /* Keeps a consistent width */
+    max-height: 300px; /* Max height for scrolling */
+    overflow-y: auto; /* Adds scrolling if the list is too long */
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  /* Links in Dropdown */
+  .navbar .dropdown-menu a {
+    color: white;
+    padding: 10px 16px;  /* Adjusted padding for smaller font */
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Show Dropdown on Hover */
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Change color when hovering over dropdown items */
+  .navbar .dropdown-menu a:hover {
+    background-color: #555;
+  }
+  
+  /* Nested Categories in Dropdown */
+  .navbar .dropdown-category {
+    margin: 10px 0;
+  }
+  
+  .navbar .dropdown-category a {
+    font-size: 14px;  /* Smaller font size for items */
+    padding: 8px 16px; /* Adjusted padding */
+  }
+  
