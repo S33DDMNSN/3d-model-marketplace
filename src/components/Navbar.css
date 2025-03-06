@@ -1,82 +1,82 @@
 /* General Navbar Styles */
 .navbar {
-    background-color: #333;
-    color: white;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    align-items: center; /* Align navbar items horizontally */
+    justify-content: flex-start; /* Align items to the left */
+    background: url('https://www.transparenttextures.com/patterns/stone.png'); /* Replace with a root-like texture URL */
+    background-size: cover; /* Ensure the background texture covers the navbar */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth to the navbar */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+    position: fixed; /* Make navbar stay at the top */
+    width: 100%; /* Full width of the page */
+    top: 0; /* Position at the top */
   }
   
-  .navbar a {
+  /* Navbar Items */
+  .navbar .nav-link {
     color: white;
     text-decoration: none;
-    font-size: 14px;  /* Smaller font size */
-    margin: 0 20px;  /* Adjust spacing between links */
-    position: relative;
+    font-weight: bold;
+    margin-right: 20px; /* Space between navbar items */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
   }
   
-  /* Products Dropdown Container */
-  .navbar .dropdown {
-    position: relative;
-    display: inline-block;
+  .navbar .nav-link:hover {
+    color: #ff6347; /* Light red on hover */
   }
   
-  /* Dropdown Button */
-  .navbar .dropdown-button {
-    background-color: #333;
-    color: white;
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+    margin-right: 20px; /* Space from other links */
+  }
+  
+  .dropdown-button {
+    background-color: transparent;
     border: none;
-    cursor: pointer;
-    font-size: 14px;  /* Smaller font size */
-  }
-  
-  /* Dropdown Content */
-  .navbar .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    left: 0; /* Aligns the dropdown directly below */
-    top: 100%; /* Puts it right below the button */
-    min-width: 150px; /* Keeps a consistent width */
-    max-height: 300px; /* Max height for scrolling */
-    overflow-y: auto; /* Adds scrolling if the list is too long */
-    flex-direction: column;
-    padding: 0;
-  }
-  
-  /* Links in Dropdown */
-  .navbar .dropdown-menu a {
     color: white;
-    padding: 10px 16px;  /* Adjusted padding for smaller font */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown-button:hover {
+    color: #ff6347; /* Change color on hover */
+  }
+  
+  /* Dropdown Menu Container */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 100; /* Ensure dropdown stays on top */
+  }
+  
+  /* Dropdown Items */
+  .dropdown-item {
+    display: block;
+    color: white;
+    padding: 10px 15px;
     text-decoration: none;
-    display: block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   
-  /* Show Dropdown on Hover */
-  .navbar .dropdown:hover .dropdown-menu {
-    display: block;
+  .dropdown-item:hover {
+    background-color: #333; /* Darker background on hover */
   }
   
-  /* Change color when hovering over dropdown items */
-  .navbar .dropdown-menu a:hover {
-    background-color: #555;
-  }
-  
-  /* Nested Categories in Dropdown */
-  .navbar .dropdown-category {
-    margin: 10px 0;
-  }
-  
-  .navbar .dropdown-category a {
-    font-size: 14px;  /* Smaller font size for items */
-    padding: 8px 16px; /* Adjusted padding */
+  /* Ensure navbar height is accounted for */
+  body {
+    padding-top: 60px; /* Adjust according to navbar height */
   }
   

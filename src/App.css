@@ -1,13 +1,39 @@
+/* Basic Styling for the Page */
+body {
+  font-family: 'Roboto', sans-serif;  /* Add a clean and readable font */
+  background-color: #f4f1e1; /* Light earthy background */
+  color: #333; /* Dark text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4e8b57; /* Nature-inspired green */
+  font-weight: bold;
+  margin: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;  /* Add a serif font for a rustic feel */
+  color: #6b4f3d; /* Earthy brown for subheadings */
+}
+
+a {
+  color: #6b8e23; /* Green links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* Navigation Bar */
 nav {
-  background-color: #4a6837; /* Earthy green */
+  background-color: #3e4e45; /* Dark green for navbar */
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -22,17 +48,16 @@ li {
 }
 
 a {
-  color: #f0f0f0;
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  font-family: "Georgia", serif;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Global page centering layout */
+/* Centered Page Layout for All Pages */
 .centered-page {
   display: flex;
   flex-direction: column;
@@ -41,55 +66,117 @@ a:hover {
   text-align: center;
   min-height: 100vh;
   padding: 20px;
+  width: 100%;
   box-sizing: border-box;
-  background-image: url('/images/root-texture.jpg'); /* Optional: Add root texture background */
+  background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'); /* Add a subtle wood texture */
   background-size: cover;
   background-position: center;
-  color: #2f3e20; /* Darker green for text */
-  font-family: "Georgia", serif;
-  margin-top: 60px; /* To offset navbar */
 }
 
-/* Product grid */
+/* For Product Grids (Home and Category Pages) */
 .product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 1200px;
-  width: 100%;
+  margin-top: 30px;
 }
 
-/* Product card */
+/* Optional - Styles for Individual Product Cards */
 .product-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #4a6837;
-  border-radius: 10px;
-  padding: 15px;
-  width: 250px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  background-color: #e4d9b8; /* Light beige background for product cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* Hover effect to lift the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .product-card h2 {
-  margin: 10px 0;
-  font-size: 1.2rem;
+  color: #4e8b57; /* Green for product names */
 }
 
-/* Ensure models fit inside product cards */
-.product-card canvas {
-  width: 100%;
-  height: 200px;
+.product-card p {
+  color: #6b4f3d; /* Earthy brown for product descriptions */
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-/* Basic page text */
-h1, h2 {
-  font-family: "Georgia", serif;
-  color: #3b5228;
+/* Button Styling */
+button {
+  background-color: #6b8e23; /* Earthy green background for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+button:hover {
+  background-color: #4e6b1c; /* Darker green when hovered */
+}
+
+button:disabled {
+  background-color: #c5e1a5; /* Light green when disabled */
+}
+
+/* Link Buttons */
+.link-button {
+  color: #6b8e23;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #e4d9b8;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #d0c29f; /* Slightly darker beige */
+}
+
+/* Footer */
+footer {
+  background-color: #3e4e45;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Root-like Texture */
+.root-texture {
+  background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Subtle root-like texture */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
 }

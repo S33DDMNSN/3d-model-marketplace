@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage';
 import StoryPage from './pages/StoryPage';
 import ConceptPage from './pages/ConceptPage';
 import Navbar from './components/Navbar';
+import './App.css';  // This ensures the styles from App.css are applied
 
 function App() {
   return (
