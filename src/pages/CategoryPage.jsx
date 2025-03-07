@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import ModelViewer from "../components/ModelViewer"; // Ensure this path is correct
 
 export default function CategoryPage() {
   const { categoryId } = useParams();
@@ -17,17 +18,16 @@ export default function CategoryPage() {
   const products = categories[categoryId] || [];
 
   return (
-    <div className="centered-page">
-      <h1>Category {categoryId}</h1>
-      <div className="product-list">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <h2>{product.name}</h2>
-            <Link to={`/product/${product.id}`}>View Product</Link>
-          </div>
-        ))}
-      </div>
+    <div className="product-list">
+  {products.map((product) => (
+    <div key={product.id} className="product-card">
+      <h2>{product.name}</h2>
+      <ModelViewer modelUrl={`/models/model${product.id}.stl`} />
+      <Link to={`/product/${product.id}`}>View Product</Link>
     </div>
+  ))}
+</div>
+
   );
 }
 

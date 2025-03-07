@@ -79,4 +79,21 @@
   body {
     padding-top: 60px; /* Adjust according to navbar height */
   }
+
+  .navbar {
+    background: linear-gradient(to right, #e0e0e0, #b0b0b0); /* marble-like gradient */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 3D effect */
+    padding: 15px;
+  }
+  
+  .nav-link {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    transform: scale(1.1); /* Hover effect to make it more interactive */
+  }
   

@@ -171,12 +171,19 @@ footer {
 
 /* Responsive Styling for Smaller Screens */
 @media (max-width: 768px) {
-  .product-list {
+  .navbar {
     flex-direction: column;
     align-items: center;
   }
 
+  .product-list {
+    display: flex;
+    flex-direction: column;
+  }
+
   .product-card {
-    width: 90%;
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
+

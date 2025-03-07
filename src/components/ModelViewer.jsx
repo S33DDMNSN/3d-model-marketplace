@@ -17,19 +17,11 @@ function Model({ modelUrl }) {
 export default function ModelViewer({ modelUrl }) {
   return (
     <Suspense fallback={<div>Loading model...</div>}>
-      <Canvas
-        style={{
-          width: "100%",      // Makes the canvas responsive to its container
-          height: "300px",    // Adjusts the height to fit well in the layout
-        }}
-      >
+      <Canvas style={{ width: "100%", height: "500px" }}>
         <ambientLight />
         <directionalLight position={[10, 10, 10]} />
         <Model modelUrl={modelUrl} />
-        <OrbitControls
-          minDistance={75}   // Adjust zoom to be further initially
-          maxDistance={100}  // Set maximum zoom out distance
-        />
+        <OrbitControls />
       </Canvas>
     </Suspense>
   );
